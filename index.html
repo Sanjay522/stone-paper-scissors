@@ -1,46 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="rockpaper.css">
-</head>
+    <link rel="stylesheet" href="rockpaper.css" />
+  </head>
 
-<body>
+  <body>
     <div class="main">
-        <div class="result">
-            <div class="result1">
-                <h1 style="border-right: 2px solid black; padding-right: 50px;">Rock</h1>
-                <h1 style="border-right: 2px solid black; padding-right: 50px;">Paper</h1>
-                <h1>scissor</h1>
-            </div>
-            <div class="result2">
-                <div id="you">
-                    YOUR SCORE <input type="number" name="" id="" disabled value="0">
-                </div>
-                <div id="computer">COMPUTER SCORE<input type="number" name="" id="" disabled value="0">
-                </div>
-            </div>
+      <div class="result">
+        <div class="result1">
+          <h1 style="border-right: 2px solid white; padding-right: 50px">
+            Rock
+          </h1>
+          <h1 style="border-right: 2px solid white; padding-right: 50px">
+            Paper
+          </h1>
+          <h1>scissor</h1>
         </div>
-        <div id="container">
-            <div class="you">
-                <img class="scissor" src="rock-paper-scissors-296853_640.png" alt="">
-                <!-- <div class="line1"></div> -->
-                <img class="rock" src="rock-paper-scissors-296854_640.png" alt="">
-                <!-- <div class="line2"></div> -->
-                <!-- <div class="line3"></div> -->
-                <img class="paper" src="rock-paper-scissors-296855_640.png" alt="">
-                <div class="computer-result">
-                    <div class="loader"></div>
-                </div>
-            </div>
-            <div class="computer"></div>
-
+        <div class="result2">
+          <div id="you">
+            YOUR SCORE
+            <input type="number" name="your-score" id="your-score" disabled value="0" />
+          </div>
+          <div id="computer">
+            COMPUTER SCORE<input
+              type="number"
+              name=""
+              id="computer-score"
+              disabled
+              value="0"
+            />
+          </div>
         </div>
+      </div>
+      <div id="container">
+        <!-- <p id="your-selection">You selected</p> -->
+        <div class="you">
+          <img
+            class="scissor"
+            src="rock-paper-scissors-296853_640.png"
+            alt=""
+          />
+          <img class="rock " src="rock-paper-scissors-296854_640.png" alt="" />
+          <img class="paper " src="rock-paper-scissors-296855_640.png" alt="" />
+          <div id="lines">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
+          <div class="win">
+            <h1 id="w-l"></h1>
+            <p id="against">Against computer</p>
+          </div>
+          <div class="computer-result">
+            <div id="loading">
+            <div class="dot1"></div>
+            <div class="dot2"></div>
+            <div class="dot3"></div>
+            <div class="dot4"></div>
+            <div class="dot5"></div>
+            <div class="dot6"></div>
+            <div class="dot7"></div>
+            <div class="dot8"></div>
+            <div class="dot9"></div>
+            <div class="dot10"></div>
+          </div>
+          </div>
+        </div>
+        <!-- <div class="computer"></div> -->
+        <div class="winning"></div>
+      </div>
+      <button id="rule">Rules</button>
+      <div class="close" id="Close">
+        &#10006;
+        <!-- <img src="close.png" alt="" /> -->
+      </div>
+      <div id="rule-detail">
+        <h2>Game Rule</h2>
+        <ul style="list-style-type: square">
+          <li>
+            Rock beats scissors, scissors beat paper, and paper beats rock.
+          </li>
+          <li>
+            Agree ahead of time whether you'll count off “rock, paper, scissors,
+            shoot” or just “rock, paper, scissors.”
+          </li>
+          <li>
+            Use rock, paper, scissors to settle minor decisions or simply play
+            to pass the time
+          </li>
+          <li>
+            If both players lay down the same hand, each player lays down
+            another hand
+          </li>
+        </ul>
+      </div>
     </div>
-</body>
-<script src="rockpaper.js"></script>
-
+    <div class="footer">
+      <div>
+        <button id="play">Play again</button>
+      </div>
+      <div class="footer-2">
+        <button id="reset">Next</button>
+      </div>
+    </div>
+  </body>
+  <script src="rockpaper.js"></script>
 </html>
