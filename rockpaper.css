@@ -2,22 +2,23 @@
 margin: 0;padding: 0;
 }
 body{
-    background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+    background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
 }
 .main{
     /* margin-top: 10%; */
-    margin: 5% 0 0 30%;
+    margin: 2% 0 0 30%;
+    height: 75svh;
 
 }
 #container{
-
+    position:absolute;
     height: 40svh;
     width: 40vw;
     /* display: flex; */
     /* margin: 0 0 0 30%; */
     /* justify-content:center ; */
     align-items: center;
-    border: 2px solid black;
+    /* border: 2px solid black; */
 }
 div img{
     height: 100px;
@@ -28,7 +29,7 @@ div img{
     cursor: pointer;
 }
 .result{
-    border: 2px solid rgb(6, 1, 1);
+    border: 2px solid white;
     border-radius: 5px;
     width: 40vw;
     height: 20svh;
@@ -38,6 +39,10 @@ div img{
     /* justify-content: center; */
 
 }
+.comp-result{
+    position: relative;
+    left: 495px;
+}
 
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
@@ -46,7 +51,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .result1{
     display: flex;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid white;
     /* gap: 20px; */
     /* padding: 5px; */
     justify-content: space-around;
@@ -84,7 +89,6 @@ input{
     top:100px ;
     left:-120px;
     border: 10px solid blue;
-    animation: paper 2s ease-in-out 1 forwards;
 
    
 }
@@ -94,7 +98,6 @@ input{
     position:absolute;
     border: 10px solid green;
     /* animation-name: paper; */
-    animation: paper 2s ease-in-out 1 forwards;
 
 }
 .scissor{
@@ -104,12 +107,15 @@ input{
     left: 150px;
     z-index: 3;
     /* background-color: red; */
-    animation: paper 2s ease-in-out 1 forwards;
-
 }
+.animation1{
+    animation: paper 1s ease-in-out 1 forwards;
+}
+
 .you{
     margin-top: 150px;
     position: relative;
+    
 }
 .line1{
     position: absolute;
@@ -142,34 +148,306 @@ input{
     background-color: white;
 }
 .computer-result{
-    position:absolute;
+    position:absolute; 
     right: 0;
+    left:15; top:-120;
     height: 100px;
     width: 100px;
     border: 10px solid white;
+    border-radius: 50%; 
+      box-shadow: inset 0px 0px 15px rgba(0, 0, 0, 0.5); 
+      animation: spin 2s linear infinite; 
+     background-color: white;
+    animation: myfirst 1s ease-in-out 1 forwards;
+} 
+.winning{
+    position:absolute;
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+    border: 10px solid blue;
     border-radius: 50%;
-    border-top: 10px dotted black;
-    box-shadow: inset 0px 0px 15px rgba(0, 0, 0, 0.5);  
-    animation: spin 2s linear infinite;
-
-    background-color: white;
+    animation: pulse 1.5s infinite ease-in-out;
 }
+.footer{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#play:hover{
+    background-color: rgba(0, 0, 255, 0.716);
+}
+#play{
+    height: 50px;
+    width: 200px;
+    font-size: 1.5em;
+    color: white;
+    background-color: rgb(0, 0, 255);
+    border: none;
+    border-radius: 10px;
+    /* background: transparent; */
+}
+#reset{
+    height: 50px;
+    width: 100px;
+    margin: 10px;
+    background:transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    font-size: 1.5em;
+}
+#reset:hover{
+    background-color: #514b91;
+}
+#rule{
+    top: 20px;
+    right: 10px;
+    position: absolute;
+    font-size: 1.5em;
+    margin: 10px;
+    height: 50px;
+    width: 100px;
+    background:transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+#rule:hover{
+    background-color: #514b91;
+
+}
+#rule-detail{
+    top: 20svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 10px;
+    position:absolute;
+    right: 3vw;
+    border: 5px solid white;
+    height: 300px;
+    width: 300px;
+    padding: 25px;
+    font-size: 1.2em;
+    background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+
+    /* transition: max-height 0.5s ease-in-out; */
+
+}
+#rule-detail ul li{
+    margin-top: 10px;
+}
+#Close{
+    position:absolute;
+    right: 2vw;
+    border: 1px solid white;
+    top: 12svh;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    width: 40px;
+    font-size: 30px;
+    /* background: url("close.png"); */
+    border-radius: 50%; 
+    background-color: white;
+    cursor: pointer;
+    animation: forwards;
+}
+/* .close img{
+    mix-blend-mode: color-burn;
+    position:absolute;
+    right: 2vw;
+    top: 12svh;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%; 
+} */
+.dot1 {
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    left:46px; top:45px;
+    /* left: 50%; */
+    transform-origin: center;
+    animation: rotate 1.5s linear infinite;
+}
+.dot2 {
+    width: 9px;
+    height: 9px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    left:46px; top:45px;
+    /* left: 50%; */
+    transform-origin: center;
+    animation: rotate 1.5s linear infinite;
+}.dot3 {
+    width: 8px;
+    height: 8px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    left:46px; top:45px;
+    /* left: 50%; */
+    transform-origin: center;
+    animation: rotate 1.5s linear infinite;
+}
+.dot4 {
+    width: 7px;
+    height: 7px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    left:46px; top:45px;
+    /* left: 50%; */
+    transform-origin: center;
+    animation: rotate 1.5s linear infinite;
+}
+.dot5 {
+    width: 6px;
+    height: 6px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    left:46px; top:45px;
+    /* left: 50%; */
+    transform-origin: center;
+    animation: rotate 1.5s linear infinite;
+}
+.dot6 {
+    width: 5px;
+    height: 5px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    left:46px; top:45px;
+    /* left: 50%; */
+    transform-origin: center;
+    animation: rotate 1.5s linear infinite;
+}
+.dot7 {
+    width: 4px;
+    height: 4px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    left:46px; top:45px;
+    /* left: 50%; */
+    transform-origin: center;
+    animation: rotate 1.5s linear infinite;
+}
+.dot8 {
+    width: 3px;
+    height: 3px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    left:46px; top:45px;
+    /* left: 50%; */
+    transform-origin: center;
+    animation: rotate 1.5s linear infinite;
+}
+.dot9 {
+    width: 2px;
+    height: 2px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    left:46px; top:45px;
+    /* left: 50%; */
+    transform-origin: center;
+    animation: rotate 1.5s linear infinite;
+}
+.dot10 {
+    width: 1px;
+    height: 1px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    left:46px; top:45px;
+    /* left: 50%; */
+    transform-origin: center;
+    animation: rotate 1.5s linear infinite;
+}
+
+.dot1 { animation-delay: 0s; }
+.dot2  { animation-delay: 0.1s; }
+.dot3  { animation-delay: 0.2s; }
+.dot4  { animation-delay: 0.3s; }
+.dot5  { animation-delay: 0.4s; }
+.dot6  { animation-delay: 0.5s; }
+.dot7  { animation-delay: 0.6s; }
+.dot8  { animation-delay: 0.7s; }
+.dot9  { animation-delay: 0.8s; }
+.dot10  { animation-delay: 0.9s; }
+
+
+#your-selection{
+    color: white;
+    font-size: 2em;
+    margin-top: 20px;
+}
+.win{
+    position:absolute;
+    left: 16vw;
+    top: 5svh;
+    font-size: 1.2em;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+@keyframes rotate {
+    0% { transform: rotate(0deg) translate(45px); }
+    100% { transform: rotate(360deg) translate(45px); }
+}
+/* .footer-2{
+    margin-top: 10px;
+} */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
 /* .loader{
   
 
 } */
 
-@keyframes spin {
+/* @keyframes spin {
   0% {
     transform: rotate(0deg);
   }
   100% {
     transform: rotate(360deg);
   }
-}
+} */
 @keyframes paper {
     0%   {left:15; top:-120;}
     100% {left:0px; top:0px;}
 } 
+
+@keyframes myfirst {
+    from {left:0px; top:0px;}
+    to {left: 495px;}
+}
 
 
